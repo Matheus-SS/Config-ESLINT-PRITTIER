@@ -1,0 +1,52 @@
+Editor config:
+Clique com o botão direito na raiz da pasta e clique em Generate .editorconfig
+deixe o editor config desse jeito:
+
+
+
+/////////////////////////////////////
+
+Eslint:
+
+se já tiver o arquivo .eslintrc.js,delete-o.
+-de um yarn add eslint -D
+-de um yarn eslint --init
+-delete o arquivo package.lock e dê um yarn
+-agora faça: yarn add prettier eslint-config-prettier eslint-plugin-prettier babel-eslint -D
+
+abra o .eslintrc.js e coloque " parser: 'babel-eslint'   " em cima de 
+" parserOptions:"
+
+dentro de extends,coloque "prettier" e "prettier/react"
+
+dentro de plugins coloque "prettier"
+
+coloque isso dentro do rules:
+
+'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.jsx', '.js'],
+      },
+    ],
+    'import/prefer-default-export': 'off',
+
+
+CRIE UM ARQUIVO CHAMADO .prettierrc e cole:
+{
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+ 
+RULES PARA O BACKEND
+rules: {
+    'prettier/prettier': 'error',
+    'class-methods-use-this': 'off',
+    'no-param-reassign': 'off',
+    camelcase: 'off',
+    'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    // 'linebreak-style': ['error', 'windows'],
+  },
+
+REACTOTRON REACT
