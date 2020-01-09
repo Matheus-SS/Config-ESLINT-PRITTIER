@@ -2,6 +2,15 @@ Editor config:
 Clique com o botão direito na raiz da pasta e clique em Generate .editorconfig
 deixe o editor config desse jeito:
 
+root = true
+
+[*]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
 
 
 /////////////////////////////////////
